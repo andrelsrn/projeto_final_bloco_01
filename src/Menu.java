@@ -1,3 +1,6 @@
+import model.Produto;
+import model.Tenis;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -5,6 +8,21 @@ public class Menu {
     private static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+
+        // 1. Instanciando um objeto do tipo Tenis
+        // Sintaxe: Classe objeto = new Construtor(atributos);
+        Tenis t1 = new Tenis(1, "Nike Air Max", 1, 599.90, "Mesh Respirável");
+
+        // 2. Testando o Polimorfismo / Herança
+        // Criando uma referência do tipo da classe mãe (Produto), apontando para a filha (Tenis)
+        Produto t2 = new Tenis(2, "Adidas UltraBoost", 1, 899.90, "Primeknit");
+
+        // 3. Chamando o método visualizar de cada um
+        System.out.println("--- TESTANDO PRODUTO 1 ---");
+        t1.visualizar(); // Vai mostrar os dados base + o material específico do tênis
+
+        System.out.println("\n--- TESTANDO PRODUTO 2 ---");
+        t2.visualizar();
 
             int opcao;
 
